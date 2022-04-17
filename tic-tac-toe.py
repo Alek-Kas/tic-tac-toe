@@ -11,6 +11,8 @@
 '''
 
 print('Это игра крестики - нолики для двух игроков')
+player = 'X'
+
 def print_field(args):
     print()
     for i in args:
@@ -19,8 +21,40 @@ def print_field(args):
         print()
     print()
 
-player = 0
-xy = [0, 0]
+def make_turn(i, j):
+    global player
+    if playing_field[i][j] == '-':
+        playing_field[i][j] = player
+        if player == 'X':
+            player = 'O'
+        else:
+            player = 'X'
+    else:
+        print(f'Сюда ставить {player} нельзя, повторите ход')
+        make_turn(*coord_input())
+    return print_field(playing_field)
+
+def coord_input():
+    coord = None
+    while coord not in coord_table:
+        coord = input('Введите координаты в формате буква столбца и цифра строки, например "b3": ')
+        coord = coord.lower()
+    for i in coord:
+        if i == 'a':
+            x = 1
+        elif i == 'b':
+            x = 2
+        elif i == 'c':
+            x = 3
+        else:
+            y = int(i)
+    return (y, x)
+
+
+victory = False
+draw_game = False
+x = 0
+y = 0
 coord_table = ('a1', 'a2', 'a3', 'b1', 'b2', 'b3', 'c1', 'c2', 'c3')
 playing_field = [
     [' ', 'a', 'b', 'c'],
@@ -29,23 +63,7 @@ playing_field = [
     ['3', '-', '-', '-']
 ]
 
-print_field(playing_field) # вывод поля через фунцию "по слоям"
-if player == 0:
-    print('Игрок "X" Ваш ход')
-else:
-    print('Игрок "O" Ваш ход')
-coord = None
-while coord not in coord_table:
-    coord = input('Введите координаты в формате буква столбца и цифра строки, например "b3": ')
-    coord = coord.lower()
-#    print(type(coord), coord)
-for i in coord:
-    if i == 'a':
-        xy[0] = 1
-    elif i == 'b':
-        xy[0] = 2
-    elif i == 'c':
-        xy[0] = 3
-    else:
-        xy[1] = int(i)
-print(xy)
+print_field(playing_field) # вывод поля через фунцию "по слоям" на первом ходу
+while not victory and not draw_game:
+    print(f'Игрок "{player}" Ваш ход')
+    make_turn(*coord_input())
