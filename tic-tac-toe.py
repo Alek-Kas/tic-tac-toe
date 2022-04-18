@@ -1,5 +1,6 @@
 # Крестики-нолики игра для двух игроков
 '''
+План предварительный
 1 приветствие
 2 отрисовка поля
 3 ход игрока "х" (ввод, проверка на координаты внутри поля, проверка на свободное поле)
@@ -50,8 +51,18 @@ def coord_input():
     return (y, x)
 
 def vic_cond(args):  # условие победы
+#    win_game = False  # изначально считаем, что победа и игра закончена, иначе ниже меняем на False
+    j_str = ''
+    i_str = ''
+    for i in args:
+        for j in i:
+            j_str += j
+            if j_str == player * 3:
+                print(f'Конец игры. Победил игрок {player}')
+                return True
+#        print()
 #        print(f'Конец игры. Победил игрок {player}')
-#        return True
+#        return test
     pass
 
 def draw_game_cond(args):  # условие ничьей
