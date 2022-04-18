@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cf3b376-4d07-4bde-8400-f5e8d75a6ea2" name="Changes" comment="V. 0.23 победа по рядам - есть">
-      <change beforePath="$PROJECT_DIR$/.idea/TikTakToe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TikTakToe.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7cf3b376-4d07-4bde-8400-f5e8d75a6ea2" name="Changes" comment="V. 0.3 победа по рядам и колонкам- есть">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tic-tac-toe.py" beforeDir="false" afterPath="$PROJECT_DIR$/tic-tac-toe.py" afterDir="false" />
     </list>
@@ -218,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650301059307</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="V. 0.3 победа по рядам и колонкам- есть">
+      <created>1650310078298</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1650310078298</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -251,11 +256,27 @@
     <MESSAGE value="V. 0.21 осталось только с победой разобраться" />
     <MESSAGE value="V. 0.22 осталось только с победой разобраться" />
     <MESSAGE value="V. 0.23 победа по рядам - есть" />
-    <option name="LAST_COMMIT_MESSAGE" value="V. 0.23 победа по рядам - есть" />
+    <MESSAGE value="V. 0.3 победа по рядам и колонкам- есть" />
+    <option name="LAST_COMMIT_MESSAGE" value="V. 0.3 победа по рядам и колонкам- есть" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tic-tac-toe.py</url>
+          <line>50</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tic-tac-toe.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
+        <watch expression="player" language="Python" />
         <watch expression="player" language="Python" />
       </configuration>
     </watches-manager>

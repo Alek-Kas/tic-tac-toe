@@ -23,7 +23,6 @@ def print_field(args):
     print()
 
 def make_turn(i, j):
-#    global player
     if playing_field[i][j] == '-':
         playing_field[i][j] = player
     else:
@@ -47,14 +46,18 @@ def coord_input():
     return (y, x)
 
 def vic_cond(args):  # условие победы
-# условие для вертикали и горизонтали:
-    for i in range(len(args)):
+    p3 = player * 3
+    for i in range(1, field_size + 1):
         j_str = ''
         i_str = ''
-        for j in range(len(args)):
+        x_1 = ''
+        x_2 = ''
+        for j in range(1, field_size + 1):
             j_str += args[j][i]
             i_str += args[i][j]
-            if (j_str[1:] or i_str[1:]) == player * 3:
+            x_1 += args[j][j]
+            x_2 += args[j][4 - j]
+            if p3 in j_str or p3 in i_str or p3 in x_1 or p3 in x_2:  # как бы это упростить?
                 print(f'Конец игры. Победил игрок "{player}"')
                 return True
 
@@ -78,8 +81,9 @@ playing_field = [
     ['2', '-', '-', '-'],
     ['3', '-', '-', '-']
 ]
-
+field_size = len(playing_field) - 1
 print_field(playing_field)  # вывод поля через фунцию "по слоям" на первом ходу
+
 while not victory and not draw_game:
     print(f'Игрок "{player}" Ваш ход')
     make_turn(*coord_input())
