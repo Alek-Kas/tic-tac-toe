@@ -10,7 +10,7 @@
 8 пунк 2
 '''
 
-print('Это игра крестики - нолики для двух игроков')
+print('Это игра крестики - нолики для двух игроков - "X" и "O"')
 player = 'X'
 
 def print_field(args):
@@ -30,9 +30,8 @@ def make_turn(i, j):
         else:
             player = 'X'
     else:
-        print(f'Сюда ставить {player} нельзя, повторите ход')
+        print(f'Сюда ставить {player} нельзя, тут уже стоит {playing_field[i][j]}, повторите ход')
         make_turn(*coord_input())
-#    return print_field(playing_field)
 
 def coord_input():
     coord = None
@@ -50,6 +49,16 @@ def coord_input():
             y = int(i)
     return (y, x)
 
+def vic_cond():  # условия победы
+    pass
+
+def draw_game_cond(args):  # условия ничьей
+    test = True
+    for i in args:
+        if '-' in i:
+            test = False
+    print('Конец игры. Ничья!!!')
+    return test
 
 victory = False
 draw_game = False
@@ -63,8 +72,10 @@ playing_field = [
     ['3', '-', '-', '-']
 ]
 
-print_field(playing_field) # вывод поля через фунцию "по слоям" на первом ходу
+print_field(playing_field)  # вывод поля через фунцию "по слоям" на первом ходу
 while not victory and not draw_game:
     print(f'Игрок "{player}" Ваш ход')
     make_turn(*coord_input())
     print_field(playing_field)
+    victory = vic_cond()
+    draw_game = draw_game_cond(playing_field)
