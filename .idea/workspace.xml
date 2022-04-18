@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cf3b376-4d07-4bde-8400-f5e8d75a6ea2" name="Changes" comment="Поправил вывод поля после ввода по уже существующему символу">
+    <list default="true" id="7cf3b376-4d07-4bde-8400-f5e8d75a6ea2" name="Changes" comment="Добавил завершение &quot;конец игры&quot; по условию закончились пустые клетки">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tic-tac-toe.py" beforeDir="false" afterPath="$PROJECT_DIR$/tic-tac-toe.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650268623150</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Добавил завершение &quot;конец игры&quot; по условию закончились пустые клетки">
+      <created>1650273759627</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650273759627</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,6 +112,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Поправил вывод поля после ввода по уже существующему символу" />
-    <option name="LAST_COMMIT_MESSAGE" value="Поправил вывод поля после ввода по уже существующему символу" />
+    <MESSAGE value="Добавил завершение &quot;конец игры&quot; по условию закончились пустые клетки" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил завершение &quot;конец игры&quot; по условию закончились пустые клетки" />
   </component>
 </project>

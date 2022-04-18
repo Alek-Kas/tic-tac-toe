@@ -49,15 +49,18 @@ def coord_input():
             y = int(i)
     return (y, x)
 
-def vic_cond():  # условия победы
+def vic_cond(args):  # условие победы
+#        print(f'Конец игры. Победил игрок {player}')
+#        return True
     pass
 
-def draw_game_cond(args):  # условия ничьей
+def draw_game_cond(args):  # условие ничьей
     test = True
     for i in args:
         if '-' in i:
             test = False
-    print('Конец игры. Ничья!!!')
+    if test == True:
+        print('Конец игры. Ничья!!!')
     return test
 
 victory = False
@@ -77,5 +80,5 @@ while not victory and not draw_game:
     print(f'Игрок "{player}" Ваш ход')
     make_turn(*coord_input())
     print_field(playing_field)
-    victory = vic_cond()
+    victory = vic_cond(playing_field)
     draw_game = draw_game_cond(playing_field)
