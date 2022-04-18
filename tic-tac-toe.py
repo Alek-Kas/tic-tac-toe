@@ -47,21 +47,16 @@ def coord_input():
     return (y, x)
 
 def vic_cond(args):  # условие победы
-#    win_game = False  # изначально считаем, что победа и игра закончена, иначе ниже меняем на False
-    for i in args:
+# условие для вертикали и горизонтали:
+    for i in range(len(args)):
         j_str = ''
         i_str = ''
-        for j in i:
-            j_str += j
-#            i_str = j_str[1:]
-#            print(i_str)
-            if j_str[1:] == player * 3:
+        for j in range(len(args)):
+            j_str += args[j][i]
+            i_str += args[i][j]
+            if (j_str[1:] or i_str[1:]) == player * 3:
                 print(f'Конец игры. Победил игрок "{player}"')
                 return True
-#        print()
-#        print(f'Конец игры. Победил игрок "{player}"')
-#        return test
-#    pass
 
 def draw_game_cond(args):  # условие ничьей
     test = True
