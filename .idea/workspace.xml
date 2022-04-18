@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cf3b376-4d07-4bde-8400-f5e8d75a6ea2" name="Changes" comment="V. 0.21 осталось только с победой разобраться">
+    <list default="true" id="7cf3b376-4d07-4bde-8400-f5e8d75a6ea2" name="Changes" comment="V. 0.22 осталось только с победой разобраться">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tic-tac-toe.py" beforeDir="false" afterPath="$PROJECT_DIR$/tic-tac-toe.py" afterDir="false" />
     </list>
@@ -98,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650291143134</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="V. 0.22 осталось только с победой разобраться">
+      <created>1650291509715</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1650291509715</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,6 +136,7 @@
     <MESSAGE value="Добавил завершение &quot;конец игры&quot; по условию закончились пустые клетки" />
     <MESSAGE value="V. 0.2 осталось только с победой разобраться" />
     <MESSAGE value="V. 0.21 осталось только с победой разобраться" />
-    <option name="LAST_COMMIT_MESSAGE" value="V. 0.21 осталось только с победой разобраться" />
+    <MESSAGE value="V. 0.22 осталось только с победой разобраться" />
+    <option name="LAST_COMMIT_MESSAGE" value="V. 0.22 осталось только с победой разобраться" />
   </component>
 </project>

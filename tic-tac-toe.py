@@ -57,7 +57,7 @@ def vic_cond(args):  # условие победы
         i_str = ''
         for j in i:
             j_str += j
-            print(j_str[1:])
+#            print(j_str[1:])
             if j_str[1:] == player * 3:
                 print(f'Конец игры. Победил игрок {player}')
                 return True
