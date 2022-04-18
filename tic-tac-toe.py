@@ -23,15 +23,11 @@ def print_field(args):
     print()
 
 def make_turn(i, j):
-    global player
+#    global player
     if playing_field[i][j] == '-':
         playing_field[i][j] = player
-        if player == 'X':
-            player = 'O'
-        else:
-            player = 'X'
     else:
-        print(f'Сюда ставить {player} нельзя, тут уже стоит {playing_field[i][j]}, повторите ход')
+        print(f'Сюда ставить "{player}" нельзя, тут уже стоит "{playing_field[i][j]}", повторите ход')
         make_turn(*coord_input())
 
 def coord_input():
@@ -57,14 +53,15 @@ def vic_cond(args):  # условие победы
         i_str = ''
         for j in i:
             j_str += j
-#            print(j_str[1:])
+#            i_str = j_str[1:]
+#            print(i_str)
             if j_str[1:] == player * 3:
-                print(f'Конец игры. Победил игрок {player}')
+                print(f'Конец игры. Победил игрок "{player}"')
                 return True
 #        print()
-#        print(f'Конец игры. Победил игрок {player}')
+#        print(f'Конец игры. Победил игрок "{player}"')
 #        return test
-    pass
+#    pass
 
 def draw_game_cond(args):  # условие ничьей
     test = True
@@ -94,3 +91,7 @@ while not victory and not draw_game:
     print_field(playing_field)
     victory = vic_cond(playing_field)
     draw_game = draw_game_cond(playing_field)
+    if player == 'X':
+        player = 'O'
+    else:
+        player = 'X'
