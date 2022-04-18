@@ -52,12 +52,13 @@ def coord_input():
 
 def vic_cond(args):  # условие победы
 #    win_game = False  # изначально считаем, что победа и игра закончена, иначе ниже меняем на False
-    j_str = ''
-    i_str = ''
     for i in args:
+        j_str = ''
+        i_str = ''
         for j in i:
             j_str += j
-            if j_str == player * 3:
+            print(j_str[1:])
+            if j_str[1:] == player * 3:
                 print(f'Конец игры. Победил игрок {player}')
                 return True
 #        print()
