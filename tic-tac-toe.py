@@ -89,7 +89,8 @@ while not victory and not draw_game:
     make_turn(*coord_input())
     print_field(playing_field)
     victory = vic_cond(playing_field)
-    draw_game = draw_game_cond(playing_field)
+    if not victory:
+        draw_game = draw_game_cond(playing_field)
     if player == 'X':
         player = 'O'
     else:
